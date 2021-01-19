@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <style>
+   body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0px 10px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery .item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .item img {
+    vertical-align: middle;
+}
+
+.gallery .caption {
+    margin: 0;
+    padding: 1em;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    transition: transform .5s;
+    transform: translateY(100%);
+    background: rgba(0, 0, 0, .7);
+    color: rgb(255, 255, 255);
+}
+
+.gallery .item:hover .caption {
+    transform: translateY(0%);
+}
+
+/* Sidenav */
+.openSidenav{
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  overflow: hidden;
+  width: 100%; /* Full width */
+  z-index: 100;
+  background-color:black;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  </style>
+ </head>
+ <body style="background-color:black;">
+  <a class="github-fork-ribbon right-bottom fixed" data-ribbon="Fork me on GitHub" href="https://url.to-your.repo" title="Fork me on GitHub">
+   Fork me on GitHub
+  </a>
+  <div class="sidenav" id="mySidenav">
+   <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">
+    ×
+   </a>
+   <a href="boxoffice.html">
+    Box Office
+   </a>
+   <a href="moviemeter.html">
+    Popular
+   </a>
+   <a href="top.html">
+    Top
+   </a>
+   <a href="bottom.html">
+    Bottom
+   </a>
+  </div>
+  <div id="main">
+   <h2>
+    <span class="openSidenav" onclick="openNav()" style="font-size:48px;cursor:pointer;color: white;">
+     ☰
+     Box Office
+    </span>
+   </h2>
+   <!-- Page content -->
+   <div class="gallery">
+    <html>
+     <body>
+      <div class="item">
+       <img alt="tt6902332" onclick="window.open('https://www.imdb.com/title/tt6902332/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BODdlNThhMTUtNmU1OS00ZjM3LWE1ZjMtOWViN2RhYWRiZTg5XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        The Marksman
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt7126948" onclick="window.open('https://www.imdb.com/title/tt7126948/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BNWY2NWE0NWEtZGUwMC00NWMwLTkyNzUtNmIxMmIyYzA0MjNiXkEyXkFqcGdeQXVyMTA2OTQ3MTUy._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        Wonder Woman 1984
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt2850386" onclick="window.open('https://www.imdb.com/title/tt2850386/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BNGU1NGNiYzYtMTQ2Ni00M2ZlLTg0N2QtMDFhMzNjNzcyMGYyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        The Croods: A New Age
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt6878306" onclick="window.open('https://www.imdb.com/title/tt6878306/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BMDNlNmVlNDItMjE3Yi00ZTA3LWIyOTktNDhhMGFlZjk5ZDQ0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        News of the World
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt6475714" onclick="window.open('https://www.imdb.com/title/tt6475714/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BOGU3NTFmNjYtODc3Ny00MWEzLWI3M2ItZjE3NDgwMTI0MzkzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        Monster Hunter
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt8829830" onclick="window.open('https://www.imdb.com/title/tt8829830/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BZmI2OThhMmYtZjVjOC00NWE3LWIwOGItMWM1MTEzMGNiOTM4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        Fatale
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt9620292" onclick="window.open('https://www.imdb.com/title/tt9620292/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BZDViMzBiNGMtZTIyNS00NzI4LWE3NDMtNmM1NDk0NzBlMWRlXkEyXkFqcGdeQXVyMTA2MDU0NjM5._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        Promising Young Woman
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt0120917" onclick="window.open('https://www.imdb.com/title/tt0120917/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BZGQwNmFhNjctNzQ0Yy00ZmE5LWIyMTEtYTZhZWQ4OTFmNDI2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTMxMjgxMzA@._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        The Emperor's New Groove
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt4532038" onclick="window.open('https://www.imdb.com/title/tt4532038/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BNTlkZDQ1ODEtY2ZiMS00OGNhLWJlZDctYzY0NTFmNmQ2NDAzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        The War with Grandpa
+       </span>
+      </div>
+      <div class="item">
+       <img alt="tt8333746" onclick="window.open('https://www.imdb.com/title/tt8333746/', '_blank');" src="https://m.media-amazon.com/images/M/MV5BNzgxNWJiOWQtZDA5Mi00NjBkLWIxMzUtZTg3Yjk5NjYyMDZjXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UX1000_.jpg"/>
+       <span class="caption">
+        Pinocchio
+       </span>
+      </div>
+     </body>
+    </html>
+   </div>
+   &gt;
+  </div>
+  <script>
+   function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+  </script>
+ </body>
+</html>
