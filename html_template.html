@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0px 10px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery .item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .item img {
+    vertical-align: middle;
+}
+
+.gallery .caption {
+    margin: 0;
+    padding: 1em;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    transition: transform .5s;
+    transform: translateY(100%);
+    background: rgba(0, 0, 0, .7);
+    color: rgb(255, 255, 255);
+}
+
+.gallery .item:hover .caption {
+    transform: translateY(0%);
+}
+
+/* Sidenav */
+.openSidenav{
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  overflow: hidden;
+  width: 100%; /* Full width */
+  z-index: 100;
+  background-color:black;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body style="background-color:black;">
+<a class="github-fork-ribbon right-bottom  fixed" href="https://url.to-your.repo" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="boxoffice.html">Box Office</a>
+  <a href="moviemeter.html">Popular</a>
+  <a href="top.html">Top</a>
+  <a href="bottom.html">Bottom</a>
+</div>
+
+
+<div id="main">
+  <h2>
+    <span class="openSidenav" style="font-size:48px;cursor:pointer;color: white;" onclick="openNav()">&#9776;</span>
+  </h2>
+  <!-- Page content -->
+  <div class="gallery">
+  </div>>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
